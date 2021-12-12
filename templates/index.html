@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <form action="" method="POST" class="container">
+        <a href="/">One Time Secret</a><br>
+        <input type="password" name="secret" placeholder="Secret"><br>
+        <input type="password" name="pin" id="pin" placeholder="PIN"><br>
+        <input type="submit" value="Continue"><br><br>
+        {% for msg in get_flashed_messages() %}
+            <p style="color: red; text-align: center;">{{msg}}</p>
+        {% endfor %}
+        <a target="_blank" href="{{url}}" style="text-decoration: none; font-size: 15px; color: rgb(0, 185, 0);">{{url}}</a>
+    </form>
+</body>
+</html>
